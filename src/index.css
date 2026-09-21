@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0e0d0b;
+  --color-charcoal: #161412;
+  --color-smoke: #221f1b;
+  --color-cream: #faf7f2;
+  --color-sand: #efe9df;
+  --color-stone: #8a847b;
+  --color-gold: #cfa75a;
+  --color-gold-light: #e2c283;
+  --color-gold-dark: #a8843e;
+
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-script: "Caveat", "Brush Script MT", cursive;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ink font-sans text-cream antialiased;
+    overflow-x: clip;
+  }
+
+  section[id],
+  footer[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+
+  img {
+    user-select: none;
+  }
+}
+
+@layer components {
+  .container-tw {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply font-sans text-[11px] font-medium tracking-[0.38em] text-gold uppercase;
+  }
+
+  .section-title {
+    @apply font-serif text-[2rem] leading-[1.1] font-medium tracking-[-0.01em] sm:text-[2.5rem] lg:text-[2.75rem];
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-2 text-sm font-medium transition-colors duration-300;
+  }
+
+  .link-arrow svg {
+    @apply transition-transform duration-300 ease-out-soft;
+  }
+
+  .link-arrow:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@keyframes scrollcue {
+  0% { transform: translateY(-100%); }
+  60%, 100% { transform: translateY(200%); }
+}
