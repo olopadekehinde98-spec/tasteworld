@@ -7,6 +7,7 @@ import { Gallery } from './components/Gallery'
 import { Hero } from './components/Hero'
 import { Navbar } from './components/Navbar'
 import { ParallaxSection } from './components/ParallaxSection'
+import { PortfolioBadge } from './components/PortfolioBadge'
 import { Stats } from './components/Stats'
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
         <Gallery />
       </motion.main>
       <Footer />
+      <PortfolioBadge />
     </MotionConfig>
   )
 }
