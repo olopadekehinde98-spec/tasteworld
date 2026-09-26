@@ -4,6 +4,8 @@ Premium restaurant-discovery landing page — React 19 + TypeScript + Vite, Tail
 
 **Live:** https://tasteworld.vercel.app
 
+![TasteWorld](docs/hero.jpg)
+
 ```bash
 npm install
 npm run dev      # http://localhost:5173
@@ -19,3 +21,9 @@ npm run build    # production build in dist/
 - Design tokens (colors, fonts) live in the `@theme` block of `src/index.css`.
 
 Images are served from the Unsplash CDN; swap the photo ids in `content.ts` for the client's own photography before launch.
+
+## Screens
+
+| Food categories | On a phone |
+| --- | --- |
+| ![Food categories](docs/desktop.jpg) | ![TasteWorld on a phone](docs/mobile.jpg) |
