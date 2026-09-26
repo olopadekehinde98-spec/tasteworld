@@ -63,7 +63,7 @@
   }
 
   .link-arrow {
-    @apply inline-flex items-center gap-2 text-sm font-medium transition-colors duration-300;
+    @apply -my-2 inline-flex items-center gap-2 py-2 text-sm font-medium transition-colors duration-300;
   }
 
   .link-arrow svg {
