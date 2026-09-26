@@ -105,13 +105,13 @@ export function Lightbox({ images, index, onClose, onChange }: Props) {
             <ChevronRight className="h-6 w-6" strokeWidth={1.5} />
           </button>
 
-          <figure className="flex max-h-full w-full max-w-5xl flex-col items-center md:px-16" onClick={(e) => e.stopPropagation()}>
+          <figure className="flex max-h-full min-h-0 w-full max-w-5xl flex-col items-center md:px-16" onClick={(e) => e.stopPropagation()}>
             <AnimatePresence mode="wait" initial={false}>
               <motion.img
                 key={current.image}
                 src={img(current.image, 1600)}
                 alt={current.alt}
-                className="max-h-[76vh] w-auto max-w-full rounded-[2px] object-contain"
+                className="max-h-[min(76vh,calc(100svh-8.5rem))] w-auto max-w-full rounded-[2px] object-contain"
                 initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.97 }}
