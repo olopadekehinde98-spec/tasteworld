@@ -77,7 +77,7 @@ export function Hero() {
               <span key={tag} className="flex items-center">
                 <a
                   href="#cuisines"
-                  className="rounded-full px-2.5 py-1 text-white/75 transition-colors duration-300 hover:bg-white/10 hover:text-gold"
+                  className="rounded-full px-2.5 py-2 text-white/75 transition-colors duration-300 hover:bg-white/10 hover:text-gold"
                 >
                   {tag}
                 </a>
