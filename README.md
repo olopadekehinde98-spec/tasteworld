@@ -2,6 +2,8 @@
 
 Premium restaurant-discovery landing page — React 19 + TypeScript + Vite, Tailwind CSS v4, Framer Motion, Lucide icons.
 
+**Live:** https://tasteworld.vercel.app
+
 ```bash
 npm install
 npm run dev      # http://localhost:5173
