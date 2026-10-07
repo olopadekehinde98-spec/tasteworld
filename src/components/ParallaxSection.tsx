@@ -13,7 +13,7 @@ export function ParallaxSection() {
 
   // The plate drifts a touch faster than the page and slowly turns — foreground depth.
   const reduce = useReducedMotion()
-  const desktop = useMediaQuery('(min-width: 768px) and (pointer: fine)')
+  const desktop = useMediaQuery('(min-width: 480px)')
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
   const plateY = useTransform(scrollYProgress, [0, 1], [60, -60])
   const plateRotate = useTransform(scrollYProgress, [0, 1], [-10, 10])

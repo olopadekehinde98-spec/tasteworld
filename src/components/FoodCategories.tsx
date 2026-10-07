@@ -36,7 +36,7 @@ function CategoryCard({ category, index }: { category: Category; index: number }
       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/10 transition-opacity duration-500" />
       <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/25" />
 
-      <span className="absolute top-3 right-3 grid h-8 w-8 translate-y-1 place-items-center rounded-full bg-gold text-ink opacity-0 transition-all duration-500 ease-out-soft group-hover:translate-y-0 group-hover:opacity-100">
+      <span className="absolute top-3 right-3 grid h-8 w-8 translate-y-1 place-items-center rounded-full bg-gold text-ink opacity-0 transition-all duration-500 ease-out-soft group-hover:translate-y-0 group-hover:opacity-100 [@media(hover:none)]:translate-y-0 [@media(hover:none)]:opacity-100">
         <ArrowUpRight className="h-4 w-4" strokeWidth={2} aria-hidden />
       </span>
 

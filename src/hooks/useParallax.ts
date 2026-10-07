@@ -1,6 +1,5 @@
 import { useScroll, useTransform, useReducedMotion, type MotionValue } from 'framer-motion'
 import type { RefObject } from 'react'
-import { useMediaQuery } from './useMediaQuery'
 
 type Options = {
   /** Total travel of the layer, as a percentage of its own height (e.g. 14 → -14%…14%). */
@@ -18,7 +17,8 @@ export function useParallax(
   { distance = 14, mode = 'through' }: Options = {},
 ): MotionValue<string> | string {
   const reduce = useReducedMotion()
-  const enabled = useMediaQuery('(min-width: 768px) and (pointer: fine)') && !reduce
+  // Parallax is scroll-driven, so it runs on touch too — only reduced-motion turns it off.
+  const enabled = !reduce
 
   const { scrollYProgress } = useScroll({
     target,
